@@ -18,7 +18,9 @@ const Navbar: FC = () => {
     <>
       <nav className="bg-zinc-50 p-4 rounded-2xl border-b border-zinc-500">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-zinc-700 text-lg font-bold"><Link to="/">Raymond Ngobeni</Link></div>
+          <div className="text-zinc-700 text-lg font-bold">
+            <Link to="/">Raymond Ngobeni</Link>
+          </div>
           <div className="flex space-x-4">
             {links.map((item, index) => (
               <Link
