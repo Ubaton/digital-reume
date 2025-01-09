@@ -34,7 +34,10 @@ const ContactInfor: FC = () => {
     <header>
       <div>
         {information.map((info, index) => (
-          <div key={index} className="flex items-center space-x-2">
+          <div
+            key={index}
+            className="flex items-center justify-center space-x-2"
+          >
             {/* <info.icon /> */}
             <span>
               {info.name}: {info.value}
