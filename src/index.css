@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.screen {
+  @apply flex items-center justify-center min-h-screen w-full px-24;
+}
