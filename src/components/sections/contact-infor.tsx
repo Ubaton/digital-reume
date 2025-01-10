@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+
+
 interface ContactProps {
   // icon: React.ComponentType;
   name: string;
@@ -32,6 +34,7 @@ const information: ContactProps[] = [
 const ContactInfor: FC = () => {
   return (
     <header>
+   
       <div>
         {information.map((info, index) => (
           <div
@@ -42,6 +45,7 @@ const ContactInfor: FC = () => {
             <span>
               {info.name}: {info.value}
             </span>
+            
           </div>
         ))}
       </div>
