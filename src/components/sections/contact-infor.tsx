@@ -30,7 +30,7 @@ const information: ContactProps[] = [
   {
     icon: MdAlternateEmail,
     name: "Address",
-    value: "4912 De Bruyn Street, Chloorkop, Edenvale, South Africa, 1620",
+    value: "4912 De Bruyn Street, Chloorkop, Edenvale, South Africa, 1624",
   },
   {
     icon: FiLink2,
