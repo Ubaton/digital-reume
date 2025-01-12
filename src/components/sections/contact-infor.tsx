@@ -3,6 +3,7 @@ import { MdAlternateEmail, MdOutlineEmail } from "react-icons/md";
 import { PiPhoneCall } from "react-icons/pi";
 import { FiLink2 } from "react-icons/fi";
 import Layout from "../ui/layout";
+import Card from "../ui/card";
 
 interface ContactProps {
   icon: React.ComponentType;
@@ -54,8 +55,8 @@ const ContactInfor: FC = () => {
   return (
     <Layout>
       <header className="flex items-center justify-center w-full">
-        <div className="flex justify-between">
-          <div className="flex-1">
+        <div className="flex justify-between space-x-4">
+          <Card className="flex-1">
             <div>
               <strong>Contact:</strong>
             </div>
@@ -67,15 +68,15 @@ const ContactInfor: FC = () => {
                 </span>
               </div>
             ))}
-          </div>
-          <div className="flex-1">
+          </Card>
+          <Card className="flex-1">
             {bio.map((bioinfo, index) => (
               <div key={index}>
                 <strong>{bioinfo.title}:</strong>
                 <p>{bioinfo.description}</p>
               </div>
             ))}
-          </div>
+          </Card>
         </div>
       </header>
     </Layout>
