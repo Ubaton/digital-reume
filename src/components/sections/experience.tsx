@@ -1,15 +1,15 @@
 import React from "react";
 
 interface ExperienceProps {
-  years: string;
+  years: number;
   company: string;
   content: string;
-  discription: string;
+  description: string;
 }
 
 const Experience: React.FC<ExperienceProps> = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center min-h-screen">
       <h1>Experience Page</h1>
     </div>
   );
