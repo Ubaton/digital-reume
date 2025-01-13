@@ -7,17 +7,11 @@ export const Route = createLazyFileRoute("/experience")({
 });
 
 function RouteComponent() {
-  // Define the required props for the Experience component
-  const experienceProps = {
-    years: 5,
-    company: "Example Company",
-    content: "Worked on various projects.",
-    description: "A brief description of my experience.",
-  };
+  
 
   return (
     <Layout>
-      <Experience {...experienceProps} />
+      <Experience />
     </Layout>
   );
 }
