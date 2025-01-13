@@ -7,6 +7,10 @@ export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
+const profileInfo = {
+  name: "Raymond Ngobeni",
+};
+
 function Index() {
   return (
     <div className="p-2 padding-top">
@@ -14,7 +18,7 @@ function Index() {
       <Layout className="my-8">
         <hr />
       </Layout>
-      <Profile />
+      <Profile {...profileInfo} />
     </div>
   );
 }
