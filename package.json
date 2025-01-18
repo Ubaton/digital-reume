@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroui/react": "^2.6.13",
     "@mynaui/icons-react": "^0.3.3",
     "@nextui-org/react": "^2.6.11",
     "@tanstack/react-router": "^1.95.1",
