@@ -1,6 +1,20 @@
 import Badge from "../ui/badge";
 import Card from "../ui/card";
 
+const techStack = [
+  "JavaScript",
+  "Node JS",
+  "Java",
+  "TypeScript",
+  "Python",
+  "Tailwind CSS",
+  "CSS",
+  "Rust",
+  "HTML",
+  "EJS",
+  "Express JS",
+];
+
 const Summary = () => {
   return (
     <Card className="bg-[#f2f2f2] dark:bg-[#090909] h-[300px] space-y-4">
@@ -16,16 +30,9 @@ const Summary = () => {
       <div className="space-y-2">
         <h1 className="title">TECH STACK</h1>
         <div className="flex space-x-4">
-          <Badge>JavaScript</Badge>
-          <Badge>Node JS</Badge>
-          <Badge>Java</Badge>
-          <Badge>TypeScript</Badge>
-          <Badge>Python</Badge>
-          <Badge>Tailwind CSS</Badge>
-          <Badge>CSS</Badge>
-          <Badge>Rust</Badge>
-          <Badge>HTML</Badge>
-          <Badge>EJS</Badge>
+          {techStack.map((tech) => (
+            <Badge key={tech}>{tech}</Badge>
+          ))}
         </div>
       </div>
     </Card>

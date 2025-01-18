@@ -7,35 +7,69 @@ import {
   BrandGithub,
 } from "@mynaui/icons-react";
 
+const projectData = [
+  {
+    title: "FILE STRUCTURE GEN",
+    link: "/",
+  },
+  {
+    title: "QR CODE GENERATOR",
+    link: "/",
+  },
+];
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/raymond-ngobeni-b7ab26163/",
+  },
+  {
+    name: "X",
+    link: "https://x.com/_GoldManRay",
+  },
+  {
+    name: "Github",
+    link: "https://github.com/Ubaton",
+  },
+];
+
+interface ProjectCardProps {
+  title: string;
+  link: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, link }) => (
+  <Card className="flex flex-col justify-between flex-1 w-[300px] h-[300px] bg-[#f2f2f2] dark:bg-[#090909]">
+    <div className="flex justify-between items-center">
+      <h1 className="title">{title}</h1>
+      <Link to={link}>
+        <ExternalLink size={25} />
+      </Link>
+    </div>
+    <div className="flex justify-end items-center space-x-2">
+      <Link to={socialLinks[0].link}>
+        <BrandLinkedin size={25} />
+      </Link>
+      <Link to={socialLinks[1].link}>
+        <BrandX size={25} />
+      </Link>
+      <Link to={socialLinks[2].link}>
+        <BrandGithub size={25} />
+      </Link>
+    </div>
+  </Card>
+);
+
 const Projects = () => {
   return (
-    <div className="flex flex-rowjustify-between w-full gap-6">
-      <Card className="flex flex-col justify-between flex-1 w-[300px] h-[300px] bg-[rgb(242,242,242)] dark:bg-[#090909]">
-        <div className="flex justify-between items-center">
-          <h1 className="title">FILE STRUCTURE GEN</h1>
-          <Link to="/">
-            <ExternalLink size={25} />
-          </Link>
-        </div>
-        <div className="flex justify-end items-center">
-          <BrandLinkedin size={25} />
-          <BrandX size={25} />
-          <BrandGithub size={25} />
-        </div>
-      </Card>
-      <Card className="flex flex-col justify-between flex-1 w-[300px] h-[300px] bg-[#f2f2f2] dark:bg-[#090909]">
-        <div className="flex justify-between items-center">
-          <h1 className="title">QR CODE GENERATOR</h1>
-          <Link to="/">
-            <ExternalLink size={25} />
-          </Link>
-        </div>
-        <div className="flex justify-end items-center">
-          <BrandLinkedin size={25} />
-          <BrandX size={25} />
-          <BrandGithub size={25} />
-        </div>
-      </Card>
+    <div className="flex flex-row justify-between w-full gap-6">
+      {projectData.map((project) => (
+        <ProjectCard
+          key={project.title}
+          title={project.title}
+          link={project.link}
+        />
+      ))}
     </div>
   );
 };

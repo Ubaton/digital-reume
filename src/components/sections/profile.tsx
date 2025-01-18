@@ -3,10 +3,6 @@ import Raymond from "../../assets/Ray.jpg";
 import Card from "../ui/card";
 import Layout from "../ui/layout";
 
-interface ProfileProps {
-  name: string;
-}
-
 const details = {
   name: "RAYMOND",
   surname: "NGOBENI",
@@ -34,15 +30,15 @@ const details = {
   ],
 };
 
-const skills = {
-  note1: ["Design and Creativity"],
-  note2: ["App Architecture"],
-  note3: ["Interpersonal Skills "],
-  note4: ["Effective Communication "],
-  note5: ["Efficient Solving"],
-};
+const skills = [
+  "Design and Creativity",
+  "App Architecture",
+  "Interpersonal Skills",
+  "Effective Communication",
+  "Efficient Solving",
+];
 
-const Profile: React.FC<ProfileProps> = () => {
+const Profile: React.FC = () => {
   return (
     <Layout className="flex">
       <Card className="bg-[#f2f2f2] dark:bg-[#090909] h-[630px]">
@@ -54,55 +50,47 @@ const Profile: React.FC<ProfileProps> = () => {
           />
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col">
-              <span className="text-2xl capitalize"> {details.name}</span>
+              <span className="text-2xl capitalize">{details.name}</span>
               <span className="text-4xl capitalize">{details.surname}</span>
             </div>
             <div>
               <h1 className="title">SKILLS</h1>
               <ul>
-                <li>{skills.note1}</li>
-                <li>{skills.note2}</li>
-                <li>{skills.note3}</li>
-                <li>{skills.note4}</li>
-                <li>{skills.note5}</li>
+                {skills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
         <div className="space-y-4">
-          <div>
-            <h1 className="heading">FULL STACK SOFTWARE ENGINEER</h1>
-          </div>
-          <div>
-            <h1 className="title">EDUCATION</h1>
-          </div>
+          <h1 className="heading">FULL STACK SOFTWARE ENGINEER</h1>
+          <h1 className="title">EDUCATION</h1>
         </div>
         <div className="space-y-4">
-          <div>
-            <div className="flex space-x-4">
-              <h1 className="heading">SECONDARY SCHOOL </h1>
-              <span className="font-bold">2012 - 2015</span>
+          {[
+            {
+              title: "SECONDARY SCHOOL",
+              date: "2012 - 2015",
+              school: "Phomolong Secondary School",
+            },
+            {
+              title: "SONLINE CERTIFICATE “UDEMY”",
+              school: "Web Development Bootcamp",
+            },
+            {
+              title: "ONLINE CERTIFICATE “AWS”",
+              school: "AWS Online Certificates",
+            },
+          ].map((edu, index) => (
+            <div key={index}>
+              <div className="flex space-x-4">
+                <h1 className="heading">{edu.title}</h1>
+                {edu.date && <span className="font-bold">{edu.date}</span>}
+              </div>
+              <p>{edu.school}</p>
             </div>
-            <div>
-              <p>Phomolong Secondary School</p>
-            </div>
-          </div>
-          <div>
-            <div className="flex space-x-4">
-              <h1 className="heading">SONLINE CERTIFICATE “UDEMY”</h1>
-            </div>
-            <div>
-              <p>Web Development Bootcamp</p>
-            </div>
-          </div>
-          <div>
-            <div className="flex space-x-4">
-              <h1 className="heading">ONLINE CERTIFICATE “AWS”</h1>
-            </div>
-            <div>
-              <p>AWS Online Certificates</p>
-            </div>
-          </div>
+          ))}
         </div>
       </Card>
     </Layout>
