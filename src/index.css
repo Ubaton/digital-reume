@@ -9,3 +9,11 @@
 .padding-top {
   @apply pt-36;
 }
+
+.title {
+  @apply text-xl font-extrabold;
+}
+
+.heading {
+  @apply text-medium font-medium;
+}

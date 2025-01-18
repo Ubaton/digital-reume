@@ -45,12 +45,12 @@ const skills = {
 const Profile: React.FC<ProfileProps> = () => {
   return (
     <Layout className="flex">
-      <Card className="w-auto h-auto">
+      <Card className="h-[630px]">
         <div className="flex space-x-4">
           <img
             src={Raymond}
             alt="Raymond Ngobeni's Picture"
-            className="w-60 h-60 rounded-lg"
+            className="w-64 h-64 rounded-lg"
           />
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col">
@@ -58,6 +58,7 @@ const Profile: React.FC<ProfileProps> = () => {
               <span className="text-4xl capitalize">{details.surname}</span>
             </div>
             <div>
+              <h1 className="title">SKILLS</h1>
               <ul>
                 <li>{skills.note1}</li>
                 <li>{skills.note2}</li>
@@ -65,6 +66,41 @@ const Profile: React.FC<ProfileProps> = () => {
                 <li>{skills.note4}</li>
                 <li>{skills.note5}</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div>
+            <h1 className="heading">FULL STACK SOFTWARE ENGINEER</h1>
+          </div>
+          <div>
+            <h1 className="title">EDUCATION</h1>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div>
+            <div className="flex space-x-4">
+              <h1 className="heading">SECONDARY SCHOOL </h1>
+              <span className="font-bold">2012 - 2015</span>
+            </div>
+            <div>
+              <p>Phomolong Secondary School</p>
+            </div>
+          </div>
+          <div>
+            <div className="flex space-x-4">
+              <h1 className="heading">SONLINE CERTIFICATE “UDEMY”</h1>
+            </div>
+            <div>
+              <p>Web Development Bootcamp</p>
+            </div>
+          </div>
+          <div>
+            <div className="flex space-x-4">
+              <h1 className="heading">ONLINE CERTIFICATE “AWS”</h1>
+            </div>
+            <div>
+              <p>AWS Online Certificates</p>
             </div>
           </div>
         </div>
