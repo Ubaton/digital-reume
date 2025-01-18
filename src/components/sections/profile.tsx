@@ -8,7 +8,8 @@ interface ProfileProps {
 }
 
 const details = {
-  name: "Raymond Ngobeni",
+  name: "RAYMOND",
+  surname: "NGOBENI",
   title: "Full Stack Developer",
   email: "mrrngobeni6@gmail.com",
   phone: "0612002807",
@@ -33,12 +34,40 @@ const details = {
   ],
 };
 
+const skills = {
+  note1: ["Design and Creativity"],
+  note2: ["App Architecture"],
+  note3: ["Interpersonal Skills "],
+  note4: ["Effective Communication "],
+  note5: ["Efficient Solving"],
+};
+
 const Profile: React.FC<ProfileProps> = () => {
   return (
-    <Layout className="flex justify-center items-center">
-      <Card className="max-w-2xl">
-        <img src={Raymond} alt="Raymond Ngobeni's Picture" />
-        {details.name}
+    <Layout className="flex">
+      <Card className="w-auto h-auto">
+        <div className="flex space-x-4">
+          <img
+            src={Raymond}
+            alt="Raymond Ngobeni's Picture"
+            className="w-60 h-60 rounded-lg"
+          />
+          <div className="flex flex-col space-y-4">
+            <div className="flex flex-col">
+              <span className="text-2xl capitalize"> {details.name}</span>
+              <span className="text-4xl capitalize">{details.surname}</span>
+            </div>
+            <div>
+              <ul>
+                <li>{skills.note1}</li>
+                <li>{skills.note2}</li>
+                <li>{skills.note3}</li>
+                <li>{skills.note4}</li>
+                <li>{skills.note5}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </Card>
     </Layout>
   );
