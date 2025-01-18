@@ -45,7 +45,7 @@ const skills = {
 const Profile: React.FC<ProfileProps> = () => {
   return (
     <Layout className="flex">
-      <Card className="bg-[#f2f2f2] h-[630px]">
+      <Card className="bg-[#f2f2f2] dark:bg-[#090909] h-[630px]">
         <div className="flex space-x-4">
           <img
             src={Raymond}

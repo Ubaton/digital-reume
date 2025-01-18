@@ -3,7 +3,7 @@ import Card from "../ui/card";
 
 const Summary = () => {
   return (
-    <Card className="bg-[#f2f2f2] h-[300px] space-y-4">
+    <Card className="bg-[#f2f2f2] dark:bg-[#090909] h-[300px] space-y-4">
       <div>
         <h1 className="title">SUMMARY</h1>
         <p>

@@ -17,7 +17,7 @@ const links: LinkProps[] = [
 const Navbar: FC = () => {
   return (
     <>
-      <nav className="bg-[#f2f2f2] dark:bg-zinc-800 p-4 rounded-2xl border-b border-zinc-500">
+      <nav className="bg-[#f2f2f2] dark:bg-[#090909] p-4 rounded-2xl border-b border-zinc-500">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-zinc-700 dark:text-zinc-200 text-lg font-bold">
             <Link to="/">Raymond Ngobeni</Link>
@@ -45,7 +45,7 @@ const Navbar: FC = () => {
         </div>
       </nav>
       <div className="px-32">
-        <div className="flex items-center justify-center p-1 bg-[#f2f2f2] dark:bg-zinc-800 rounded-b-xl min-w-md border-b border-zinc-500">
+        <div className="flex items-center justify-center p-1 bg-[#f2f2f2] dark:bg-[#090909] rounded-b-xl min-w-md border-b border-zinc-500">
           <span className="dark:text-zinc-200">
             Full Stack Software Engineer
           </span>
